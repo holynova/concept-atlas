@@ -1,0 +1,9 @@
+output/
+qa/
+.DS_Store
+node_modules/
+
+.wrangler/
+.env*
+.dev.vars*
+source/original-chat.txt

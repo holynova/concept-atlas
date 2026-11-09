@@ -1,0 +1,313 @@
+[
+  {
+    "id": 51,
+    "slug": "origin-fetch",
+    "title": "回源",
+    "english": "Origin fetch",
+    "category": "计算机技术",
+    "hook": "附近的缓存没有答案，请求下一站去哪儿？",
+    "summary": "缓存没有可用副本时，向源站取内容就是回源。",
+    "explanation": "用户先访问附近的缓存节点。若资源未缓存、已失效或需重新验证，缓存便向保存原始内容的源站取数据，再按缓存策略响应用户。合适的响应还能被缓存供后续使用。回源可能发生在多层缓存之间，并非每次访问都直达源站。",
+    "pitfall": "回源不等于出错；能否缓存仍取决于响应与缓存规则。",
+    "scene": "上下对照图。上图缓存命中：用户→附近缓存→直接返回，源站安静。下图缓存未命中：用户→缓存→源站，源站→缓存→用户，返回路径用不同颜色箭头；旁边小标签按规则缓存。仅短标签：用户、缓存、命中、未命中、源站、回源。",
+    "tags": [
+      "缓存",
+      "CDN",
+      "网络"
+    ],
+    "sourceTitle": "Cloudflare：默认缓存行为",
+    "sourceUrl": "https://developers.cloudflare.com/cache/concepts/default-cache-behavior/",
+    "image": "assets/posters/51-origin-fetch.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 51; category 计算机技术.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「回源」\nExact hook: 「附近的缓存没有答案，请求下一站去哪儿？」\nMain diagram brief (instructions, not verbatim prose): 上下对照图。上图缓存命中：用户→附近缓存→直接返回，源站安静。下图缓存未命中：用户→缓存→源站，源站→缓存→用户，返回路径用不同颜色箭头；旁边小标签按规则缓存。仅短标签：用户、缓存、命中、未命中、源站、回源。\nTakeaway band exact text: 「记住这句」+「缓存没有可用副本时，向源站取内容就是回源。」\nSmall caution text: 「回源不等于出错；能否缓存仍取决于响应与缓存规则。」\nExact footer: 「CONCEPT ATLAS · 51」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c014-ff55-79d2-b104-c2f299a1aca4/exec-abd27e1a-51f6-40ab-9de8-9edfbcd98815.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：命中直接返回；未命中用户→缓存→源站，源站→缓存→用户，按规则缓存，中文与脚注正确。"
+  },
+  {
+    "id": 52,
+    "slug": "rollback",
+    "title": "回滚",
+    "english": "Rollback",
+    "category": "计算机技术",
+    "hook": "新版出了故障，怎样先回到能工作的版本？",
+    "summary": "把受影响的变更退回已知状态，先恢复服务。",
+    "explanation": "以应用发布为例，新版本异常时可切回先前保留且兼容的版本，以缩短故障影响。回滚需要版本历史、回退方案和验证；恢复旧程序并不自动撤销数据写入、数据库结构变更或已发送的通知。不可逆变更需要另外处理。",
+    "pitfall": "程序版本回退，不会自动撤销所有数据与外部影响。",
+    "scene": "三个编号漫画格：1稳定v1用户微笑；2发布v2报错；3大弯箭头从v2回到v1恢复服务。主线清楚v1→v2→回到v1，不把时钟倒转当成真实时间旅行。下方独立小数据库注明数据需另行处理。",
+    "tags": [
+      "发布",
+      "恢复",
+      "软件工程"
+    ],
+    "sourceTitle": "Kubernetes：回滚Deployment",
+    "sourceUrl": "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/#rolling-back-a-deployment",
+    "image": "assets/posters/52-rollback.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 52; category 计算机技术.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「回滚」\nExact hook: 「新版出了故障，怎样先回到能工作的版本？」\nMain diagram brief (instructions, not verbatim prose): 三个编号漫画格：1稳定v1用户微笑；2发布v2报错；3大弯箭头从v2回到v1恢复服务。主线清楚v1→v2→回到v1，不把时钟倒转当成真实时间旅行。下方独立小数据库注明数据需另行处理。\nTakeaway band exact text: 「记住这句」+「把受影响的变更退回已知状态，先恢复服务。」\nSmall caution text: 「程序版本回退，不会自动撤销所有数据与外部影响。」\nExact footer: 「CONCEPT ATLAS · 52」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-378178da-cebb-4a74-a07c-3c21c206b8c1.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：v1稳定、v2报错、回退v1恢复；数据另行处理。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 53,
+    "slug": "idempotency",
+    "title": "幂等",
+    "english": "Idempotency",
+    "category": "计算机技术",
+    "hook": "同一个付款请求重发三次，怎样只扣一次？",
+    "summary": "同一意图重复执行，效果与执行一次相同。",
+    "explanation": "网络超时后，客户端常不知道请求是否已经成功。让请求携带稳定的幂等标识，服务端可识别同一操作的重试并复用结果，避免重复创建订单或重复扣款。幂等描述的是最终效果；实现还需约定标识范围、有效期和参数一致性。",
+    "pitfall": "幂等不保证只收到一次请求；不同付款意图应使用不同标识。",
+    "scene": "同一张订单号K42从浏览器发送三条重试箭头到服务端，服务端用印章识别同一幂等键，右边只有一张订单和一次扣款。短标签：同一订单K42、重试×3、识别重复、只生效一次。底部小对比：换新订单→用新标识。不要画三次付款三次扣款。",
+    "tags": [
+      "重试",
+      "API",
+      "重复请求"
+    ],
+    "sourceTitle": "AWS Builders Library：安全重试与幂等API",
+    "sourceUrl": "https://aws.amazon.com/builders-library/making-retries-safe-with-idempotent-APIs/",
+    "image": "assets/posters/53-idempotency.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 53; category 计算机技术.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「幂等」\nExact hook: 「同一个付款请求重发三次，怎样只扣一次？」\nMain diagram brief (instructions, not verbatim prose): 同一张订单号K42从浏览器发送三条重试箭头到服务端，服务端用印章识别同一幂等键，右边只有一张订单和一次扣款。短标签：同一订单K42、重试×3、识别重复、只生效一次。底部小对比：换新订单→用新标识。不要画三次付款三次扣款。\nTakeaway band exact text: 「记住这句」+「同一意图重复执行，效果与执行一次相同。」\nSmall caution text: 「幂等不保证只收到一次请求；不同付款意图应使用不同标识。」\nExact footer: 「CONCEPT ATLAS · 53」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-37a5b37f-4e27-4aa4-81fa-9a8b03d229ee.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：三次同键K42请求只生成一张订单并扣款一次；新意图用K43。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 54,
+    "slug": "race-condition",
+    "title": "竞态条件",
+    "english": "Race condition",
+    "category": "计算机技术",
+    "hook": "两个人都加了一次，计数为什么只多了一？",
+    "summary": "结果依赖任务的交错顺序，就要警惕竞态。",
+    "explanation": "共享计数从0开始，两个线程都先读到0，各自算出1，再先后写回1，结果只增加一次。这是读、改、写交错造成的丢失更新。原子操作、合适的锁或事务可以保护关键步骤；并发本身并不一定有错，关键是是否正确协调。",
+    "pitfall": "示意的是一种竞态：两个加一操作不一定每次都出错。",
+    "scene": "清晰双泳道时序图。顶部共享计数0；左线程A读0→算1→写1，右线程B也在写入前读0→算1→写1；按时间向下交错连接，底部最终1，旁边预期2。小修复图原子加一：0→1→2。只画这组准确数字，不要多个多余计算。",
+    "tags": [
+      "并发",
+      "时序",
+      "共享状态"
+    ],
+    "sourceTitle": "Microsoft Learn：托管线程最佳实践",
+    "sourceUrl": "https://learn.microsoft.com/dotnet/standard/threading/managed-threading-best-practices",
+    "image": "assets/posters/54-race-condition.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 54; category 计算机技术.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「竞态条件」\nExact hook: 「两个人都加了一次，计数为什么只多了一？」\nMain diagram brief (instructions, not verbatim prose): 清晰双泳道时序图。顶部共享计数0；左线程A读0→算1→写1，右线程B也在写入前读0→算1→写1；按时间向下交错连接，底部最终1，旁边预期2。小修复图原子加一：0→1→2。只画这组准确数字，不要多个多余计算。\nTakeaway band exact text: 「记住这句」+「结果依赖任务的交错顺序，就要警惕竞态。」\nSmall caution text: 「示意的是一种竞态：两个加一操作不一定每次都出错。」\nExact footer: 「CONCEPT ATLAS · 54」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-7cdbc892-bccb-4ae5-b9f3-092d548a3a4c.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：两线程都读0并写1，最终1与预期2；原子修复0→1→2。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 55,
+    "slug": "split-brain",
+    "title": "脑裂",
+    "english": "Split brain",
+    "category": "计算机技术",
+    "hook": "节点失联后，两边都说自己才是主节点？",
+    "summary": "分区后多方各自主导写入，状态可能分叉。",
+    "explanation": "集群节点之间的通信被切断时，部分系统可能出现两个分区各自认为拥有主导权，并继续接受互相冲突的写入。网络分区不必然导致脑裂：正确的多数派仲裁、隔离旧主等机制，可让不具资格的一方停止写入，避免双主分叉。",
+    "pitfall": "网络分区不必然脑裂；正确仲裁会限制哪一方可写。",
+    "scene": "上半图原来一个集群共享账本，主节点A和备节点B互通；中间网络断线锯齿；下半图左右分区都戴主节点小旗并各接收一个冲突写入：同一库存左写9右写8，账本分叉。旁边小防护示意多数派批准才能写；不要声称所有分布式系统断网都双主。",
+    "tags": [
+      "分布式",
+      "网络分区",
+      "一致性"
+    ],
+    "sourceTitle": "HashiCorp：识别与恢复Consul脑裂",
+    "sourceUrl": "https://support.hashicorp.com/hc/en-us/articles/360058026733-Identifying-and-Recovering-from-a-Consul-Split-Brain",
+    "image": "assets/posters/55-split-brain.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 55; category 计算机技术.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「脑裂」\nExact hook: 「节点失联后，两边都说自己才是主节点？」\nMain diagram brief (instructions, not verbatim prose): 上半图原来一个集群共享账本，主节点A和备节点B互通；中间网络断线锯齿；下半图左右分区都戴主节点小旗并各接收一个冲突写入：同一库存左写9右写8，账本分叉。旁边小防护示意多数派批准才能写；不要声称所有分布式系统断网都双主。\nTakeaway band exact text: 「记住这句」+「分区后多方各自主导写入，状态可能分叉。」\nSmall caution text: 「网络分区不必然脑裂；正确仲裁会限制哪一方可写。」\nExact footer: 「CONCEPT ATLAS · 55」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-5d7349eb-5796-4223-b4c8-e54d944a8c94.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：分区后双主各自写入使账本分叉；多数派仲裁防护清晰。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 56,
+    "slug": "marginal-utility",
+    "title": "边际效用",
+    "english": "Marginal utility",
+    "category": "心理与生活",
+    "hook": "第一口冰淇淋很快乐，第五口还一样吗？",
+    "summary": "边际效用，问的是再多一单位增加多少满足。",
+    "explanation": "总效用是已消费数量带来的总体满足；边际效用则是再增加一单位所带来的变化。例如同一情境下，第一份冰淇淋很满足，之后每多一份的新增满足可能减少。递减是常见模型，并非每种商品、所有人和所有数量下的无条件定律。",
+    "pitfall": "新增满足变少，不等于累计满足已经下降。",
+    "scene": "一位探险者依次吃第一、第二、第三份冰淇淋，每份旁边新增满足示意柱分别5、3、1（明确示例积分）。下面总满足依次5、8、9，上升但变慢。两排标签严格区分新增满足与累计满足。主角同一人同一情境。",
+    "tags": [
+      "经济学",
+      "满足",
+      "增量"
+    ],
+    "sourceTitle": "OpenStax：消费选择与边际效用",
+    "sourceUrl": "https://openstax.org/books/principles-economics-3e/pages/6-1-consumption-choices",
+    "image": "assets/posters/56-marginal-utility.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 56; category 心理与生活.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「边际效用」\nExact hook: 「第一口冰淇淋很快乐，第五口还一样吗？」\nMain diagram brief (instructions, not verbatim prose): 一位探险者依次吃第一、第二、第三份冰淇淋，每份旁边新增满足示意柱分别5、3、1（明确示例积分）。下面总满足依次5、8、9，上升但变慢。两排标签严格区分新增满足与累计满足。主角同一人同一情境。\nTakeaway band exact text: 「记住这句」+「边际效用，问的是再多一单位增加多少满足。」\nSmall caution text: 「新增满足变少，不等于累计满足已经下降。」\nExact footer: 「CONCEPT ATLAS · 56」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-04ff1535-0eab-486a-82b5-833fb63ae0bd.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：新增满足5、3、1与累计5、8、9严格区分。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 57,
+    "slug": "base-rate",
+    "title": "基准率忽视",
+    "english": "Base-rate neglect",
+    "category": "心理与生活",
+    "hook": "检测阳性，为什么还不能直接当成九成患病？",
+    "summary": "判断阳性有多可信，还要看原来有多常见。",
+    "explanation": "假设1000人中患病率1%，则患病10人、无病990人。灵敏度90%检出9个真阳性；假阳性率10%又带来99个假阳性。108个阳性里只有9人真患病，比例约8.3%。忽略最初的患病比例，就容易把检测性能误当成阳性后的患病概率。",
+    "pitfall": "仅为假设数字，不代表真实检测性能。",
+    "scene": "必须准确的大字数量树：1000人分为患病10人（1%）与无病990人（99%）；患病组灵敏度90%→真阳9人，无病组假阳性率10%→假阳99人。合并阳性108人，其中真阳9人，9÷108≈8.3%。可省略阴性支路，主图明确只汇总阳性。不要把90%灵敏度写成阳性后90%患病。",
+    "tags": [
+      "概率",
+      "贝叶斯",
+      "基准率"
+    ],
+    "sourceTitle": "Penn State：贝叶斯定理",
+    "sourceUrl": "https://online.stat.psu.edu/stat414/lesson/2/2.4",
+    "image": "assets/posters/57-base-rate.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 57; category 心理与生活.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「基准率忽视」\nExact hook: 「检测阳性，为什么还不能直接当成九成患病？」\nMain diagram brief (instructions, not verbatim prose): 必须准确的大字数量树：1000人分为患病10人（1%）与无病990人（99%）；患病组灵敏度90%→真阳9人，无病组假阳性率10%→假阳99人。合并阳性108人，其中真阳9人，9÷108≈8.3%。可省略阴性支路，主图明确只汇总阳性。不要把90%灵敏度写成阳性后90%患病。\nTakeaway band exact text: 「记住这句」+「判断阳性有多可信，还要看原来有多常见。」\nSmall caution text: 「仅为假设数字，不代表真实检测性能。」\nExact footer: 「CONCEPT ATLAS · 57」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-c1f45e60-df92-4cf9-a7e0-901f36c141ab.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：1000人→10/990；9真阳/99假阳；9÷108≈8.3%，假设提示正确。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 58,
+    "slug": "simpsons-paradox",
+    "title": "辛普森悖论",
+    "english": "Simpson’s paradox",
+    "category": "心理与生活",
+    "hook": "每组都领先，合起来怎么反而落后？",
+    "summary": "各组占比不同，合并后的比例可能反转。",
+    "explanation": "自拟成功率示例：容易组A为9/10、B为80/100；困难组A为20/100、B为1/10，A在每组均较高。但A合计29/110约26.4%，B合计81/110约73.6%，整体反转。原因是A承担了更多困难案例；统计比较应结合分组构成和因果问题。",
+    "pitfall": "数字为可验算示例；是否分组要依据具体因果问题。",
+    "scene": "必须是一张大而清楚的3行对照表，标题成功/总数（示例）。列：A方案、B方案。行容易组：A 9/10=90%，B 80/100=80%；行困难组：A 20/100=20%，B 1/10=10%；合并行：A 29/110≈26.4%，B 81/110≈73.6%。每组用绿色箭头标A高，合并用珊瑚箭头标B高。小图展示A困难案例多100、容易少10；B容易多100、困难少10。准确列和数字最重要，不得增删数字或调换。",
+    "tags": [
+      "统计",
+      "分组",
+      "反直觉"
+    ],
+    "sourceTitle": "E. H. Simpson：列联表中交互作用的解释（1951）",
+    "sourceUrl": "https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.2517-6161.1951.tb00088.x",
+    "image": "assets/posters/58-simpsons-paradox.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 58; category 心理与生活.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「辛普森悖论」\nExact hook: 「每组都领先，合起来怎么反而落后？」\nMain diagram brief (instructions, not verbatim prose): 必须是一张大而清楚的3行对照表，标题成功/总数（示例）。列：A方案、B方案。行容易组：A 9/10=90%，B 80/100=80%；行困难组：A 20/100=20%，B 1/10=10%；合并行：A 29/110≈26.4%，B 81/110≈73.6%。每组用绿色箭头标A高，合并用珊瑚箭头标B高。小图展示A困难案例多100、容易少10；B容易多100、困难少10。准确列和数字最重要，不得增删数字或调换。\nTakeaway band exact text: 「记住这句」+「各组占比不同，合并后的比例可能反转。」\nSmall caution text: 「数字为可验算示例；是否分组要依据具体因果问题。」\nExact footer: 「CONCEPT ATLAS · 58」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-8b884c09-86e2-4de1-be96-6f813f2928cf.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：两组A均领先但合并B领先，所有分数与百分比正确。",
+    "generationAttempts": 1
+  },
+  {
+    "id": 59,
+    "slug": "regression-to-mean",
+    "title": "回归均值",
+    "english": "Regression to the mean",
+    "category": "心理与生活",
+    "hook": "一次发挥特别神，下次为什么常没那么神？",
+    "summary": "极端结果里的偶然成分，下次往往不会原样重演。",
+    "explanation": "一次表现往往同时包含较稳定的能力与随机波动。如果按特别高或特别低的一次结果挑选对象，再次测量时，结果平均而言可能更靠近总体平均。这是统计倾向，不是自然在补偿，也不保证每个人下次都向均值移动，更不能把它自动算成某种干预的功劳。",
+    "pitfall": "这是群体统计倾向，不保证个体下次一定变普通。",
+    "scene": "用两次投篮测试示意。左图第一次选出成绩极高的一群人，气泡能力+好运；右图同一批第二次测量，散点平均更靠近总体均值虚线，但保留少数仍高或更高的点。纵轴成绩，水平虚线总体平均，箭头标平均更接近。只用示意点不写虚构实验事实；小注示意图。",
+    "tags": [
+      "统计",
+      "波动",
+      "极端值"
+    ],
+    "sourceTitle": "Bland与Altman：回归均值（BMJ，1994）",
+    "sourceUrl": "https://www.bmj.com/content/308/6942/1499",
+    "image": "assets/posters/59-regression-to-mean.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 59; category 心理与生活.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「回归均值」\nExact hook: 「一次发挥特别神，下次为什么常没那么神？」\nMain diagram brief (instructions, not verbatim prose): 用两次投篮测试示意。左图第一次选出成绩极高的一群人，气泡能力+好运；右图同一批第二次测量，散点平均更靠近总体均值虚线，但保留少数仍高或更高的点。纵轴成绩，水平虚线总体平均，箭头标平均更接近。只用示意点不写虚构实验事实；小注示意图。\nTakeaway band exact text: 「记住这句」+「极端结果里的偶然成分，下次往往不会原样重演。」\nSmall caution text: 「这是群体统计倾向，不保证个体下次一定变普通。」\nExact footer: 「CONCEPT ATLAS · 59」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.\nCRITICAL ACCURACY REFINEMENT: The main diagram must track THE SAME EXACT 6 PEOPLE across two basketball tests. Draw two adjacent charts with the same vertical scale and identical horizontal dashed overall-population mean at height 40%. Left chart label「第一次：选出这6人」; exactly SIX dots ALL high above the mean. Right chart label「第二次：仍是这6人」; exactly SIX corresponding dots: five nearer to the mean but still mostly above it, ONE remains extremely high or goes higher. Each dot is labeled A,B,C,D,E,F on both charts, so the same cohort is unambiguous. Use thin straight correspondence lines or matching small labels, no background population dots anywhere. The two group mean markers show second group average closer to overall mean. Right-hand high outlier F visibly at least as high as F in first test to demonstrate not every individual regresses. This is an illustrative diagram, add「同一批人，两次测量」and「示意图」. Keep all other exact hook, title, summary, caution, style and footer from the base brief. Do NOT draw many extra second-test dots or replace cohort with general population. This correction matters more than decorative characters.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-bf74a373-313e-48cf-93be-58215299a168.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过（一次定向修正）：同一批6人A–F双测量，群体均值更接近总体平均，F仍保持高值，未保证个体回归。",
+    "generationAttempts": 2,
+    "initialPrompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 59; category 心理与生活.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「回归均值」\nExact hook: 「一次发挥特别神，下次为什么常没那么神？」\nMain diagram brief (instructions, not verbatim prose): 用两次投篮测试示意。左图第一次选出成绩极高的一群人，气泡能力+好运；右图同一批第二次测量，散点平均更靠近总体均值虚线，但保留少数仍高或更高的点。纵轴成绩，水平虚线总体平均，箭头标平均更接近。只用示意点不写虚构实验事实；小注示意图。\nTakeaway band exact text: 「记住这句」+「极端结果里的偶然成分，下次往往不会原样重演。」\nSmall caution text: 「这是群体统计倾向，不保证个体下次一定变普通。」\nExact footer: 「CONCEPT ATLAS · 59」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "rejectedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-39884507-b4c2-4f15-b046-262936ad5206.png"
+  },
+  {
+    "id": 60,
+    "slug": "adverse-selection",
+    "title": "逆向选择",
+    "english": "Adverse selection",
+    "category": "心理与生活",
+    "hook": "买家只肯出平均价，好车为什么反而退出？",
+    "summary": "交易前的信息差，可能把更好的选择挤出市场。",
+    "explanation": "卖家更了解二手车质量，买家难以分辨便按平均质量报价。好车卖家觉得价格太低而退出，剩余车辆的平均质量下降，又令买家继续压价，可能进一步挤出好车。这是交易前信息不对称的选择问题，与签约后行为改变的道德风险不同。",
+    "pitfall": "逆向选择重在交易前信息差；信息披露与担保可能缓解。",
+    "scene": "三段二手车市场漫画：1卖家知道车况，好车和问题车并排，买家看不清；2买家按平均质量报价，好车卖家摇头离场；3留下的问题车更多，平均质量下降。好车用完整蓝车，问题车用珊瑚车加扳手标识，非侮辱人。底部小图独立检测/担保改善信息。短标签：事前信息差、平均报价、好车退出。",
+    "tags": [
+      "信息不对称",
+      "市场",
+      "经济学"
+    ],
+    "sourceTitle": "OpenStax：信息不完全与逆向选择",
+    "sourceUrl": "https://openstax.org/books/principles-economics-3e/pages/16-2-insurance-and-imperfect-information",
+    "image": "assets/posters/60-adverse-selection.png",
+    "prompt": "Use case: infographic-diagram. Create ONE polished original Chinese educational comic poster, exact portrait 3:4 aspect ratio, 1200×1600 pixels. Continue the existing Concept Atlas series. User-requested art style: The Adventures of Tintin / 丁丁历险记, Hergé-inspired European ligne claire: confident uniform clean dark-navy ink outlines, flat unshaded colors, precise spacious diagram, witty adventure atmosphere. Use original recurring East Asian explorer with short dark hair, mustard sweater over white collar and cobalt trousers, optional short-haired female friend in coral jacket. Cream background #FFF7E7, navy #17324A ink, cobalt #3879B8, muted coral #D85C43, mustard #E8B751, jade #4F8D78. Thin navy outer rectangular frame, square corners, safe margins. No 3D, gradients, watercolor, photorealism, distressed texture or dense hatching. Very readable LARGE Chinese sans serif, phone-optimized, generous negative space. Fixed design: small series masthead top; small issue/category; HUGE Chinese concept title; medium hook; main diagram occupies 55%; bottom pale-mustard takeaway band; small footer. The image must explain the concept via sequence, direction, numbers or spatial relationships. EXACT Chinese below only. Keep prose SHORT: hook + diagram labels + summary + one short caution. Do NOT print these drawing instructions on the poster. Do not add an explanatory paragraph or English title.\nIssue: 60; category 心理与生活.\nExact masthead: 「概念探险队 / 一图搞懂一个概念」\nExact concept title: 「逆向选择」\nExact hook: 「买家只肯出平均价，好车为什么反而退出？」\nMain diagram brief (instructions, not verbatim prose): 三段二手车市场漫画：1卖家知道车况，好车和问题车并排，买家看不清；2买家按平均质量报价，好车卖家摇头离场；3留下的问题车更多，平均质量下降。好车用完整蓝车，问题车用珊瑚车加扳手标识，非侮辱人。底部小图独立检测/担保改善信息。短标签：事前信息差、平均报价、好车退出。\nTakeaway band exact text: 「记住这句」+「交易前的信息差，可能把更好的选择挤出市场。」\nSmall caution text: 「逆向选择重在交易前信息差；信息披露与担保可能缓解。」\nExact footer: 「CONCEPT ATLAS · 60」\nInput image 1 is ONLY the visual series reference (poster 16): match its warm ivory, navy outlines, flat colors, large title and yellow takeaway band; draw entirely new concept as specified above. Do not copy its Moon/Earth subject, its text or its issue number. IMPORTANT footer has no denominator: do NOT write /30 or /60.",
+    "styleReference": "assets/posters/16-tidal-locking.png",
+    "generationTool": "built-in image_gen",
+    "generatedSourcePath": "/Users/sym/.codex/generated_images/01a1c0b0-ccaa-7852-a92b-d65305f1f5dc/exec-d2aabd8f-61a6-4589-9f56-e5244b8b70cb.png",
+    "dimensions": {
+      "width": 1086,
+      "height": 1448
+    },
+    "dimensionSource": "PNG IHDR from built-in image_gen output; original copied unchanged",
+    "visualQA": "通过：交易前信息差→平均报价→好车退出；独立检测担保缓解。",
+    "generationAttempts": 1
+  }
+]
