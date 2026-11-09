@@ -1,1 +1,12 @@
-{"name":"concept-atlas","version":"1.1.0","private":true,"scripts":{"dev":"python3 -m http.server 4317 --directory dist","build":"uv run --with pillow python source/build-assets.py","deploy:check":"npx --yes wrangler@4.128.0 deploy --dry-run --config wrangler.jsonc","deploy":"npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc"}}
+{
+  "name": "concept-atlas",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 4317 --directory dist",
+    "build": "uv run --with pillow python source/build-assets.py",
+    "deploy:check": "npx --yes wrangler@4.128.0 deploy --dry-run --config wrangler.jsonc",
+    "deploy": "npx --yes wrangler@4.128.0 deploy --config wrangler.jsonc",
+    "stage:portfolio": "node source/stage-portfolio.mjs"
+  }
+}

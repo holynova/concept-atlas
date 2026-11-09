@@ -1,3 +1,5 @@
+const baseUrl = new URL('./', import.meta.url);
+const assetUrl = (path) => new URL(path, baseUrl).href;
 const $ = (selector) => document.querySelector(selector);
 const gallery = $('#gallery');
 const reader = $('#reader');
@@ -11,9 +13,9 @@ function text(tag, className, value) {
   return node;
 }
 const number = (item) => String(item.id).padStart(2, '0');
-const thumbnail = (item) => `/assets/thumbs/${number(item)}-${item.slug}.webp`;
-const detail = (item) => `/assets/detail/${number(item)}-${item.slug}.webp`;
-const original = (item) => `/${item.image}`;
+const thumbnail = (item) => assetUrl(`assets/thumbs/${number(item)}-${item.slug}.webp`);
+const detail = (item) => assetUrl(`assets/detail/${number(item)}-${item.slug}.webp`);
+const original = (item) => assetUrl(item.image);
 
 function makeCard(item, index) {
   const card = text('article', 'concept-card', '');
@@ -137,7 +139,7 @@ document.querySelectorAll('[data-download-all]').forEach(button=>button.addEvent
   $('#download-meter').value=0;$('#download-meter').max=concepts.length;$('#cancel-download').textContent='取消';
   document.querySelectorAll('[data-download-all]').forEach(control=>control.disabled=true);
   try{
-    const {makeZip}=await import('/zip-store.js');
+    const {makeZip}=await import('./zip-store.js');
     const files=new Array(concepts.length);let cursor=0,completed=0;
     async function worker(){
       while(cursor<concepts.length){
@@ -168,7 +170,7 @@ document.querySelectorAll('[data-download-all]').forEach(button=>button.addEvent
 $('#cancel-download').addEventListener('click',()=>{if(downloadController)downloadController.abort();else $('#download-progress').hidden=true;});
 
 try {
-  const response = await fetch('/concepts.json'); if(!response.ok)throw new Error(`HTTP ${response.status}`);
+  const response = await fetch(assetUrl('concepts.json')); if(!response.ok)throw new Error(`HTTP ${response.status}`);
   concepts = (await response.json()).sort((a,b)=>Number(a.id)-Number(b.id)); render(); followHash();
 } catch(error) {
   $('#results-count').textContent='图鉴暂时没有打开，请刷新重试。';
