@@ -1,6 +1,6 @@
 {
   "name": "concept-atlas",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "scripts": {
     "dev": "python3 -m http.server 4317 --directory dist",
